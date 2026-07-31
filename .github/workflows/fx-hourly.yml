@@ -44,9 +44,9 @@ jobs:
         run: |
           MODE="${{ github.event.inputs.mode || 'send' }}"
           case "$MODE" in
-            check)   python fx_exchage.py --check --debug ;;
-            dry-run) python fx_exchage.py --dry-run --debug ;;
-            *)       python fx_exchage.py ;;
+            check)   python fx_slack.py --check --debug ;;
+            dry-run) python fx_slack.py --dry-run --debug ;;
+            *)       python fx_slack.py ;;
           esac
 
       - name: Upload log
