@@ -5,7 +5,9 @@ on:
     # cron은 UTC 기준. 아래는 평일 KST 09~18시 매시 정각 (UTC 00~09).
     # 24시간 전부 받으려면:  - cron: "0 * * * *"
     # 30분마다 받으려면:     - cron: "0,30 0-9 * * 1-5"
-    - cron: "20 21 * * 0-4"
+    - cron: "30 05 * * 1-5"
+      timezone: 'Asia/Seoul'
+    
   workflow_dispatch:
     inputs:
       mode:
